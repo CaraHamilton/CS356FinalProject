@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup_window"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/off_white"
+    android:elevation="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter by Category"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/list_checks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <CheckBox
+            android:id="@+id/food_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food"
+            android:textSize="16sp"/>
+
+        <CheckBox
+            android:id="@+id/retail_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retail"
+            android:textSize="16sp"/>
+
+        <CheckBox
+            android:id="@+id/service_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salon"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="apply"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/list_checks"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

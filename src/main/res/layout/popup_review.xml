@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardCornerRadius="10sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/popup_window"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/off_white"
+        android:elevation="8dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave a Review"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginLeft="100sp"
+            android:layout_marginRight="100sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/rating_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/star_outline"
+                android:tag="1"
+                android:clickable="true"></ImageView>
+
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/star_outline"
+                android:tag="2"
+                android:clickable="true"></ImageView>
+
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/star_outline"
+                android:tag="3"
+                android:clickable="true"></ImageView>
+
+            <ImageView
+                android:id="@+id/star4"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/star_outline"
+                android:tag="4"
+                android:clickable="true"></ImageView>
+
+            <ImageView
+                android:id="@+id/star5"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:src="@drawable/star_outline"
+                android:tag="5"
+                android:clickable="true"></ImageView>
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your review here..."
+            app:layout_constraintTop_toBottomOf="@id/rating_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="16sp"
+            android:layout_margin="20sp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Name (optional)"
+            app:layout_constraintTop_toBottomOf="@id/edit_text"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="16sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="100sp">
+        </EditText>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="30sp"
+            android:layout_marginRight="10sp"
+            app:layout_constraintTop_toBottomOf="@id/edit_name"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
